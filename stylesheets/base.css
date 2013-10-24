@@ -1068,12 +1068,13 @@ font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 .block h3 {
-font-size: 18px;
+font-size: 20px;
 line-height: 1.8;
 /*border-bottom: 2px solid #f44545;*/
 display: inline-block;
 margin: 0 auto 20px auto;
 text-transform: uppercase;
+opacity: 0.4;
 }
 
 .block .timeline h4 a, .content .page .block .links a {
@@ -1100,7 +1101,7 @@ text-decoration: none;
     margin: 0 0 0 0; 
 }
 
-.block h6 {
+.block h6 a{
 	color: #6cbabd;
 	font-size: 16px;
     margin: 0 0 0 0; 
