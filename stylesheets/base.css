@@ -127,7 +127,7 @@ z-index:999;
 }
 
 
-/*----------------------------------- nav */
+/*------------------------------------------------------------------------------------------------ nav */
 
 #header {
 text-align: center; 
@@ -147,7 +147,7 @@ display: block;
 #nav {
 
 width: 800px;
-margin: 50px auto auto auto;
+margin: 50px auto auto 130px;
 height: 60px;
 line-height: 30px;
 position: relative;
@@ -189,7 +189,7 @@ z-index: 9;
 font-family: 'Open Sans', sans-serif;
 }
 
-#tt-choose span{
+.tt-choose span{
 text-transform: uppercase;
 text-decoration: none;
 color: #f44545;
@@ -200,6 +200,10 @@ font-family: 'Open Sans', sans-serif;
 }
 #nav li a:hover {
 color: #f44545;
+}
+
+.language_choose{
+	position: absolute;
 }
 
 span.fakecontajner {
@@ -215,7 +219,7 @@ margin: 0 auto;
 position: absolute;
 z-index: 30;
 cursor: pointer;
-left:352px;
+left:370px;
 }
 
 /*----------------------------------- content */
@@ -649,8 +653,7 @@ to {
 	transform: scale(1);
 }
 
-/*----------------------------------- dashboard */
-
+/*---------------------------------------------------------------------------------------------------dashboard */
 .dashboard{
 position: absolute;
 margin-top: 580px;
@@ -872,7 +875,7 @@ animation-name: zhen2;
 	transform: scale(1);
 }
 
-/*----------------------------------- phone */
+/*--------------------------------------------------------------------------------------------------- phone*/
 
 #contact img {
 	position: absolute;
@@ -934,7 +937,7 @@ animation-name:tada;
 }
 
 
-/*----------------------------------- footer */
+/*--------------------------------------------------------------------------------------------------- footer */
 
 .footer{ 
 	position: relative;
@@ -954,7 +957,7 @@ animation-name:tada;
 
 }
 
-/*--------------------------------------------------------------------------------------------------- footer */
+/*--------------------------------------------------------------------------------------------------- about me */
 .cat{
 width: 960px;
 margin: 50px auto auto auto;
@@ -1137,7 +1140,7 @@ float: left;
 }
 
 .block .timeline2{
-margin-top: 50px;
+margin-top: 57px;
 margin-left: 45px;
 width: 40%;
 float: left;
@@ -1149,7 +1152,7 @@ margin: 90px auto;
 width: 960px;
 height:20px; 
 /*background: #f44545;*/
-background: transparent url(juchi.png) 68% 0 scroll repeat-x;
+background: transparent url(../images/juchi.png) 68% 0 scroll repeat-x;
 
 }
 
@@ -1251,4 +1254,132 @@ background: transparent url(juchi.png) 68% 0 scroll repeat-x;
 
 .btn-c img{
 	margin-top: 25px;
+}
+
+
+/*--------------------------------------------------------------------------------------------------- contact */
+
+.greybg {
+width: 960px;
+height: 1100px;
+margin: 50px auto;
+color: #fff;
+position: relative;
+}
+
+.kuang-one{
+	width: 750px;
+	min-height: 448px;
+	position: relative;
+	border-radius: 15px;
+	border: 2px solid #6cbabd;
+	z-index: 2;
+	margin: 0 auto;
+}
+
+.kuang-two{
+width: 770px;
+min-height: 472px;
+position: absolute;
+border-radius: 25px;
+border: 2px solid #f44545;
+z-index: 1;
+margin-left: -12px;
+margin-top: -12px;
+}
+
+.kuang-two h3{
+font-size: 16px;
+
+}
+
+.kuang-two img{
+position: absolute;
+margin-left: 50px;
+margin-top: 320px;
+}
+
+
+.contactway p{
+margin: 30px 70px auto 70px;
+font-size: 14px;
+text-align: left;
+
+}
+
+.little-moses-two {
+clear: both;
+margin-left: 380px;
+margin-top: 50px;
+width: 1px;
+height: 380px;
+position: absolute;
+background: #6cbabd;
+}
+
+.pa{
+float: left;
+margin-left: 50px;
+margin-top: 60px;
+margin-right: 20px;
+width: 37%;
+font-size: 14px;
+text-align: left;
+}
+
+.pa p{
+line-height: 2;
+}
+.contactway{
+float: left;
+margin-top: 120px;
+width: 40%;
+}
+.t-wrapper{
+	position: relative;
+	margin-top: -20px;
+}
+.t-wrapper li{
+	float: left;
+	width: 400px;
+	margin-left: 35px;
+}
+.t-wrapper li a{
+    display: block;
+    width: 68px;
+    height: 32px;
+    margin: 0 2px;
+    outline: none;
+	position: relative;
+	z-index: 2;
+
+}
+.t-wrapper li .t-email{
+    background: transparent url(../images/email.png) no-repeat top left;
+}
+.t-wrapper li .t-facebook{
+    background: transparent url(../images/facebook.png) no-repeat top left;
+}
+.t-wrapper li .t-linkedin{
+   background: transparent url(../images/in.png) no-repeat top left;
+}
+.t-wrapper li .t-qq{
+    background: transparent url(../images/qq.png) no-repeat top left;
+}
+.t-wrapper li .t-skype{
+    background: transparent url(../images/skype.png) no-repeat top left;
+}
+.t-wrapper li .t-pdf{
+    background: transparent url(../images/pdf2.png) no-repeat top left;
+}
+.t-wrapper li a p{
+
+	font-size: 14px;
+	position: relative;
+	margin-top: 20px;
+	margin-left: 45px;
+	width: 400px;
+
+
+
 }
