@@ -974,7 +974,7 @@ border-radius: 150px;
 	position: absolute;
 	width: 270px;
 	height: 270px;
-	border:1px solid  #f44545;
+	border:2px solid  #f44545;
 	border-radius: 270px;
   -webkit-border-radius: 270px;
   -moz-border-radius: 270px;
@@ -1379,6 +1379,7 @@ width: 40%;
 	margin-top: 20px;
 	margin-left: 45px;
 	width: 400px;
+	padding-top: 5px;
 
 
 
