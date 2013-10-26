@@ -1,5 +1,5 @@
 body,h1,h2,h3,h4,h5,h6,em {
-font-family: 'Noto Sans','Open Sans', sans-serif;
+font-family: 'Noto Sans', sans-serif;
 font-weight: normal;
 color: #eee;
 text-rendering: optimizeLegibility;
@@ -68,11 +68,7 @@ body{
 	margin: 0;
 }
 
-/*#home.screen{
-	width:100%;
-	height:100%;
-	background:#6cbabd;
-}*/
+
 .start{
 	width:960px;
 	height:1080px;
@@ -81,6 +77,10 @@ body{
 	margin: 0 auto;
 }
 
+.lan{
+	position: absolute;
+	margin-left: 700px;
+}
 .language{
 position: relative;
 width: 264px;
@@ -145,9 +145,8 @@ display: block;
 }
 
 #nav {
-
 width: 800px;
-margin: 50px auto auto 130px;
+margin: 50px auto auto 140px;
 height: 60px;
 line-height: 30px;
 position: relative;
@@ -170,33 +169,19 @@ margin-right:40px;
 }
 
 #nav li a {
-text-transform: uppercase;
-text-decoration: none;
 color: #fff;
 position: relative;
 z-index: 10;
 font-size: 13px;
-font-family: 'Open Sans', sans-serif;
+
 }
 
-#t-choose span{
-text-transform: uppercase;
-text-decoration: none;
-color: #f44545;
-position: relative;
-font-size: 16px;
-z-index: 9;
-font-family: 'Open Sans', sans-serif;
-}
 
 .tt-choose span{
-text-transform: uppercase;
-text-decoration: none;
 color: #f44545;
 position: relative;
 font-size: 13px;
 z-index: 9;
-font-family: 'Open Sans', sans-serif;
 }
 #nav li a:hover {
 color: #f44545;
@@ -219,7 +204,7 @@ margin: 0 auto;
 position: absolute;
 z-index: 30;
 cursor: pointer;
-left:370px;
+left:380px;
 }
 
 /*----------------------------------- content */
@@ -237,7 +222,6 @@ margin-bottom: 80px;
 /*----------------------------------- light*/
 .intro {
 color:#fff;
-font-family: 'Open Sans';
 font-size: 24px;
 font-weight: lighter;
 position: absolute;
@@ -245,6 +229,7 @@ margin-left: 585px;
 margin-top: 27px;
 margin-right: 140px;
 opacity: 0.8;
+font-family: 'Noto Sans', sans-serif;
 }
 
 .light {
@@ -492,7 +477,7 @@ to {
 }
 #doodles figure:hover figcaption,
 #doodles figure #doodles figcaption {
-	opacity: 0.9;
+	opacity: 1;
 	-webkit-transform: scale(1);
 	-moz-transform: scale(1);
 	-ms-transform: scale(1);
@@ -1067,7 +1052,7 @@ width: 960px;
 height: 1100px;
 margin: 50px auto;
 color: #fff;
-font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+
 }
 
 .block h3 {
@@ -1381,6 +1366,34 @@ width: 40%;
 	width: 400px;
 	padding-top: 5px;
 
+}
 
+/*--------------------------------------------------------------------------------------------------- work */
+#work {
+	position: relative;
+	margin-top: -3px;
+	padding-bottom: 0px;
+}
 
+.work {
+height: 1500px;
+}
+
+.container .one-third.column {
+float: left;
+width: 320px;
+height: 200px;
+margin: 50px auto;
+}
+
+.container .columns {
+float: left;
+display: inline;
+margin-left: 25px;
+margin-right: 0px;
+}
+.container .work-one {
+display: inline-block;
+width: 320px;
+position: relative;
 }
