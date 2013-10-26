@@ -488,8 +488,7 @@ to {
 }
 
 #doodles figcaption{
-	margin-left: 90px;
-	margin-top: 26px;
+	margin-left: 50px;
 }
 #doodles figure:hover figcaption,
 #doodles figure #doodles figcaption {
@@ -501,6 +500,7 @@ to {
 }
 
 .hatch{
+
 	animation-name: hatch;
 	-webkit-animation-name: hatch;	
 

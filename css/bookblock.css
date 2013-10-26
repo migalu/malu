@@ -9,7 +9,8 @@
 	perspective: 1300px;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
-	backface-visibility: hidden;}
+	backface-visibility: hidden;
+}
 
 .bb-page {
 	position: absolute;
@@ -49,6 +50,7 @@
 	top: 0;
 	left: 0;
 	background: #DBDBDB;
+
 
 }
 
