@@ -33,17 +33,16 @@ border: 1px solid #6cbabd;
 	left: -10px;
 	padding: 20px;
 	background: #6cbabd;
-	color: #ed4e6e;
 }
 
 .grid figcaption h3 {
 	margin: 0;
 	padding: 0;
-	color: #fff;
+	color: #1a2f3f;
 }
 
 .grid figcaption span:before {
-	content: 'by ';
+	content: '';
 }
 
 .grid figcaption a {
@@ -80,7 +79,8 @@ display: inline-block;
 }
 
 .cs-style-1 figcaption h3 {
-	margin-top: 70px;
+	margin-top: 50px;
+	margin-bottom: 10px;
 }
 
 .cs-style-1 figcaption span {
