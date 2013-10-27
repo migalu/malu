@@ -25,6 +25,7 @@ border: 1px solid #6cbabd;
 	max-width: 100%;
 	display: block;
 	position: relative;
+	margin: 0 auto;
 }
 
 .grid figcaption {
@@ -388,3 +389,4 @@ display: inline-block;
 		min-width: 300px;
 	}
 }
+
