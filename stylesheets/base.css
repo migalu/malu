@@ -207,7 +207,7 @@ cursor: pointer;
 left:380px;
 }
 
-/*----------------------------------- content */
+/*----------------------------------- bg */
 #content{
 position: relative;
 text-align: center; 
@@ -217,6 +217,7 @@ margin-bottom: 80px;
 
 .bg{
 	padding-top: 20px;
+	margin-left: 51px;
 }
 
 /*----------------------------------- light*/
@@ -470,6 +471,7 @@ to {
 	position: absolute;
 	margin-left: 328px;
 	margin-top: 670px;
+
 }
 
 #doodles figcaption{
@@ -485,6 +487,9 @@ to {
 }
 
 .hatch{
+		-o-transform: rotate(-40deg); /* Opera浏览器 */    
+-webkit-transform: rotate(-40deg); /* Webkit内核浏览器 */
+-moz-transform: rotate(-40deg);
 
 	animation-name: hatch;
 	-webkit-animation-name: hatch;	
@@ -864,8 +869,8 @@ animation-name: zhen2;
 
 #contact img {
 	position: absolute;
-	margin-top: 750px;
-	margin-left: 750px;
+	margin-top: 400px;
+	margin-left: 840px;
 	z-index: 100007;
 	display:block;
 	cursor: pointer;
