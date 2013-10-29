@@ -403,9 +403,11 @@ zoom: 1;
     -moz-box-shadow: rgba(0,0,0,.3) 0 1px 3px;
 }
 .pro-one{
-	height: 1000px;
+	height: 2300px;
 }
-
+ #content{
+ 	margin-bottom: 60px;
+ }
  #content .padder .intro {
 clear: both;
 margin-top: -6px;
@@ -804,7 +806,6 @@ input.sp-selector-5:checked ~ .sp-content .sp-slider > li:nth-child(5){
 
 }
 
-
 #description h3{
 	color: #474747;
 	font-size: 16px;
@@ -817,9 +818,33 @@ input.sp-selector-5:checked ~ .sp-content .sp-slider > li:nth-child(5){
 
 }
 
+#detail{
+	margin: 50px;
+
+}
+
+#detail h3{
+	color: #474747;
+	font-size: 16px;
 
 
+}
+#detail h4{
+	font-size: 14px;
+	color: #595959;
 
+}
+
+#detail .img-text{
+	float: left;
+}
+#detail img{
+border: 1px solid #b1b1b1;
+margin-top: 20px;
+margin-right: 40px;
+margin-bottom: 20px;
+
+}
 
 
 
