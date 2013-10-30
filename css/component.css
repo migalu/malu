@@ -398,7 +398,7 @@ zoom: 1;
 
 
 .frame{
-	background: #eee;
+	background: #fff;
 	-webkit-box-shadow: rgba(0,0,0,.3) 0 1px 3px;
     -moz-box-shadow: rgba(0,0,0,.3) 0 1px 3px;
 }
@@ -409,6 +409,11 @@ zoom: 1;
 .pro-two{
 	height: 1100px;
 }
+
+.pro-three{
+	height: 4100px;
+}
+
  #content{
  	margin-bottom: 60px;
  }
@@ -882,6 +887,11 @@ input.sp-selector-5:checked ~ .sp-content .sp-slider > li:nth-child(5){
 }
 #detail h4{
 	font-size: 14px;
+	color:#6cbabd ;
+
+}
+#detail h5{
+	font-size: 14px;
 	color: #595959;
 
 }
@@ -916,9 +926,8 @@ margin-bottom: 20px;
 	background-color: #f44545;
 	}
 
-
-
-
-
+.under{
+	top: 600px;
+}
 
 
