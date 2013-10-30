@@ -509,6 +509,30 @@ margin-left: 68px;
 
 }
 
+.first img.menu-one{
+z-index: 1003;
+float: right;
+position: absolute;
+margin-top: -35px;
+margin-left: 33px;
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -ms-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.first img.menu-one:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=1);
+  opacity: 1;
+
+}
+
 .first img.pre{
 z-index: 1003;
 float: right;
