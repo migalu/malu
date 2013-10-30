@@ -405,6 +405,10 @@ zoom: 1;
 .pro-one{
 	height: 2300px;
 }
+
+.pro-two{
+	height: 1100px;
+}
  #content{
  	margin-bottom: 60px;
  }
@@ -486,7 +490,7 @@ z-index: 1003;
 float: right;
 position: absolute;
 margin-top: -35px;
-margin-left: 33px;
+margin-left: 68px;
 
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
@@ -505,6 +509,29 @@ margin-left: 33px;
 
 }
 
+.first img.pre{
+z-index: 1003;
+float: right;
+position: absolute;
+
+margin-left: -33px;
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -ms-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.first img.pre:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=1);
+  opacity: 1;
+
+}
 
 
 .sp-slideshow {
@@ -845,6 +872,25 @@ margin-right: 40px;
 margin-bottom: 20px;
 
 }
+
+#run a:link{
+	text-align: center;
+	color: #fff;
+	background-color: #434343;
+	font-size: 16px;
+	font-family: 'Noto Sans', sans-serif;
+	text-rendering: optimizeLegibility;
+	font-weight: lighter;
+	z-index: 1002;
+	line-height: 80px;
+	margin-left: 50px;
+    -webkit-border-radius: 3px;
+    padding: 5px 30px 5px 30px;
+
+	}
+#run a:hover{
+	background-color: #f44545;
+	}
 
 
 
