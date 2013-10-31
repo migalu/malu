@@ -906,6 +906,14 @@ margin-right: 40px;
 margin-bottom: 20px;
 
 }
+#detail .video{
+	text-align: center;
+}
+
+#detail .video h4 a{
+		font-size: 14px;
+	color:#6cbabd ;
+}
 
 #run a:link{
 	text-align: center;
