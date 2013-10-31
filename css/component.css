@@ -13,6 +13,9 @@
 	height: 1500px;
 }
 
+.pro-four{
+	height: 2550px;
+}
 
 
 .grid {
@@ -942,6 +945,10 @@ margin-bottom: 20px;
 
 .under{
 	top: 600px;
+}
+
+#detail .noborder img{
+	border: 0 solid #fff;
 }
 
 
