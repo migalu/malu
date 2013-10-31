@@ -908,6 +908,7 @@ input.sp-selector-5:checked ~ .sp-content .sp-slider > li:nth-child(5){
 
 #detail .img-text{
 	float: left;
+	margin-bottom: 30px;
 }
 #detail img{
 border: 1px solid #b1b1b1;
