@@ -64,7 +64,7 @@
 }
 
 .gamma-description {
-	background: #fff;
+	background: #1a2f3f;
 	background: rgba(255, 255, 255, 0.6);
 	position: absolute;
 	top: 20px;
@@ -168,10 +168,11 @@ button.gamma-btn-sspause:before {
 	z-index: 10000;
 	text-align: center;
 	display:none;
+	background-color:#1a2f3f;
 }
 
 .gamma-overlay {
-	background: #000;
+	background: #1a2f3f;
 	position: fixed;
 	top: 0;
 	left: 0;
