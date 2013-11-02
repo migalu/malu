@@ -8,7 +8,7 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 .clearfix:after { clear: both; }
 
 body,h1,h2,h3,h4,h5,h6,em {
-font-family: 'Noto Sans', sans-serif;
+font-family: 'Noto Sans', 'arial',sans-serif;
 font-weight: normal;
 color: #eee;
 text-rendering: optimizeLegibility;
