@@ -627,7 +627,7 @@ to {
 /*----------------------------------- png */
 
 .bigger {
-	margin-left: 813px;
+	margin-left: 812px;
 	margin-top: 118px;
 	position: absolute;
 }
@@ -1032,7 +1032,8 @@ border-radius: 150px;
 
 .cat h1{
 color:#f44545; 
-	margin-left: 420px;
+margin-left: 420px;
+padding-top: 20px;
 
 }
 .cat p{
