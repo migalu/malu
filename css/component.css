@@ -1,5 +1,5 @@
 .pro-one{
-	height: 2300px;
+	height: 2950px;
 }
 
 .pro-two{
@@ -922,6 +922,13 @@ border: 1px solid #b1b1b1;
 margin-top: 20px;
 margin-right: 40px;
 margin-bottom: 20px;
+
+}
+
+#detail .cocktail img{
+
+margin-right: -5px;
+border: 0px solid #b1b1b1;
 
 }
 #detail .video{
