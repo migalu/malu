@@ -10,7 +10,7 @@
 	height: 4200px;
 }
 .pro-four{
-	height: 1500px;
+	height: 3050px;
 }
 
 .pro-five{
@@ -966,6 +966,16 @@ border: 0px solid #b1b1b1;
 	border: 0 solid #fff;
 }
 
-
+#detail  .data img{ 
+	 margin-right:28px;
+	 border: 0 solid #fff;
+}
  
+#detail  .color img{ 
+	 margin-right:600px;
+}
+
+#detail  .pre img{ 
+	 margin-right:26px;
+}
 
