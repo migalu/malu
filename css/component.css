@@ -3,25 +3,29 @@
 }
 
 .pro-two{
-	height: 1100px;
+	height: 1200px;
 }
 
 .pro-three{
 	height: 4200px;
 }
 .pro-four{
-	height: 3050px;
+	height: 3100px;
 }
 .pro-four-en{
-	height: 3300px;
+	height: 3400px;
 }
 
 .pro-five{
-	height: 2600px;
+	height: 3450px;
+}
+
+.pro-five{
+	height: 3550px;
 }
 
 .pro-six{
-	height:1400px;
+	height:1600px;
 }
 }
 
@@ -933,6 +937,35 @@ margin-bottom: 20px;
 
 }
 
+#nodetail img{
+margin-top: 20px;
+margin-right: 28px;
+margin-bottom: 20px;
+
+}
+
+#nodetail{
+	margin: 50px;
+
+}
+
+#nodetail h3{
+	color: #474747;
+	font-size: 16px;
+
+
+}
+#nodetail h4{
+	font-size: 14px;
+	color:#6cbabd ;
+
+}
+#nodetail h5{
+	font-size: 14px;
+	color: #595959;
+
+}
+
 #detail .cocktail img{
 
 margin-right: -5px;
@@ -972,10 +1005,14 @@ border: 0px solid #b1b1b1;
 
 #detail .noborder img{
 	border: 0 solid #fff;
+	margin-top: -20px;
+margin-right: 40px;
+margin-bottom: 20px;
+}
 }
 
 #detail  .data img{ 
-	 margin-right:28px;
+	 margin-right:26px;
 	 border: 0 solid #fff;
 }
  
@@ -988,4 +1025,13 @@ border: 0px solid #b1b1b1;
 }
 #detail  .pre img{ 
 	 margin-right:26px;
+	 border: 0 solid #fff;
 }
+
+#detail  .maofa img{ 
+	 margin-right:10px;
+	 border: 0 solid #fff;
+}
+
+
+
