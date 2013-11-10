@@ -460,6 +460,7 @@ height:120px;
 }
 #content #title div.left {
 float: left;
+width: 400px;
 }
 
 #content #title h1 {
