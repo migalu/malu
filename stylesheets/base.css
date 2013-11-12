@@ -856,6 +856,10 @@ animation-name: zhen2;
 	margin-left: -25px;
 	margin-top: 40px;
 }
+
+.de figcaption a{
+	margin-left: -33px;
+}
 .dashboard figure:hover figcaption,
 .dashboard figure.dashboard figcaption {
 	opacity: 0.9;
