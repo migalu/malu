@@ -1205,12 +1205,14 @@ background: transparent url(../images/juchi.png) 68% 0 scroll repeat-x;
 .illustrator     { width:70%;  -moz-animation:illustrator  3s ease-out;        -webkit-animation:illustrator  3s ease-out;        }
 .aftereffect     { width:50%;  -moz-animation:aftereffect  3s ease-out;      -webkit-animation:aftereffect  3s ease-out;      }
 .flash           { width:30%;  -moz-animation:flash   3s ease-out;   -webkit-animation:flash   3s ease-out;   }
+.cinema4d           { width:40%;  -moz-animation:flash   3s ease-out;   -webkit-animation:flash   3s ease-out;   }
 .indesign        { width:70%; -moz-animation:indesign 3s ease-out; -webkit-animation:indesign 3s ease-out; }
 .axure           { width:90%;  -moz-animation:axure 3s ease-out;       -webkit-animation:axure 3s ease-out;       }
 .html            { width:60%;  -moz-animation:html  3s ease-out;        -webkit-animation:html  3s ease-out;        }
+.processing           { width:40%;  -moz-animation:html  3s ease-out;        -webkit-animation:html  3s ease-out;        }
 .german          { width:70%;  -moz-animation:german 3s ease-out;      -webkit-animation:german 3s ease-out;      }
 .english         { width:50%;  -moz-animation:english 3s ease-out;   -webkit-animation:english 3s ease-out;   }
-.chinese         { width:100%;  -moz-animation:english 6s ease-out;   -webkit-animation:english 6s ease-out;   }
+.chinese         { width:100%;  -moz-animation:english 3s ease-out;   -webkit-animation:english 3s ease-out;   }
 
 @-moz-keyframes photoshop        { 0%  { width:0px;} 100%{ width:70%;}  }
 @-moz-keyframes illustrator      { 0%  { width:0px;} 100%{ width:70%;}  }

@@ -1197,14 +1197,15 @@ background: transparent url(../images/juchi.png) 68% 0 scroll repeat-x;
 	opacity: 0.7;
 }
 
-
 .photoshop       { width:70%;  -moz-animation:photoshop 3s ease-out;       -webkit-animation:photoshop 3s ease-out;       }
 .illustrator     { width:70%;  -moz-animation:illustrator  3s ease-out;        -webkit-animation:illustrator  3s ease-out;        }
 .aftereffect     { width:50%;  -moz-animation:aftereffect  3s ease-out;      -webkit-animation:aftereffect  3s ease-out;      }
 .flash           { width:30%;  -moz-animation:flash   3s ease-out;   -webkit-animation:flash   3s ease-out;   }
+.cinema4d           { width:40%;  -moz-animation:flash   3s ease-out;   -webkit-animation:flash   3s ease-out;   }
 .indesign        { width:70%; -moz-animation:indesign 3s ease-out; -webkit-animation:indesign 3s ease-out; }
 .axure           { width:90%;  -moz-animation:axure 3s ease-out;       -webkit-animation:axure 3s ease-out;       }
 .html            { width:60%;  -moz-animation:html  3s ease-out;        -webkit-animation:html  3s ease-out;        }
+.processing           { width:40%;  -moz-animation:html  3s ease-out;        -webkit-animation:html  3s ease-out;        }
 .german          { width:70%;  -moz-animation:german 3s ease-out;      -webkit-animation:german 3s ease-out;      }
 .english         { width:50%;  -moz-animation:english 3s ease-out;   -webkit-animation:english 3s ease-out;   }
 .chinese         { width:100%;  -moz-animation:english 3s ease-out;   -webkit-animation:english 3s ease-out;   }
@@ -1213,9 +1214,11 @@ background: transparent url(../images/juchi.png) 68% 0 scroll repeat-x;
 @-moz-keyframes illustrator      { 0%  { width:0px;} 100%{ width:70%;}  }
 @-moz-keyframes aftereffect      { 0%  { width:0px;} 100%{ width:50%;}  }
 @-moz-keyframes flash   	     { 0%  { width:0px;} 100%{ width:30%;}  }
+@-moz-keyframes cinema4d  	     { 0%  { width:0px;} 100%{ width:40%;}  }
 @-moz-keyframes indesign         { 0%  { width:0px;} 100%{ width:70%;} }
 @-moz-keyframes axure            { 0%  { width:0px;} 100%{ width:90%;}  }
 @-moz-keyframes html             { 0%  { width:0px;} 100%{ width:60%;}  }
+@-moz-keyframes processing       { 0%  { width:0px;} 100%{ width:40%;}  }
 @-moz-keyframes german           { 0%  { width:0px;} 100%{ width:70%;}  }
 @-moz-keyframes english          { 0%  { width:0px;} 100%{ width:50%;} }
 @-moz-keyframes chinese          { 0%  { width:0px;} 100%{ width:100%;} }
@@ -1224,9 +1227,11 @@ background: transparent url(../images/juchi.png) 68% 0 scroll repeat-x;
 @-webkit-keyframes illustrator      { 0%  { width:0px;} 100%{ width:70%;}  }
 @-webkit-keyframes aftereffect      { 0%  { width:0px;} 100%{ width:50%;}  }
 @-webkit-keyframes flash   	        { 0%  { width:0px;} 100%{ width:30%;}  }
+@-webkit-keyframes cinema4d   	        { 0%  { width:0px;} 100%{ width:30%;}  }
 @-webkit-keyframes indesign         { 0%  { width:0px;} 100%{ width:70%;} }
 @-webkit-keyframes axure            { 0%  { width:0px;} 100%{ width:90%;}  }
 @-webkit-keyframes html             { 0%  { width:0px;} 100%{ width:60%;}  }
+@-webkit-keyframes processing   	{ 0%  { width:0px;} 100%{ width:40%;}  }
 @-webkit-keyframes german           { 0%  { width:0px;} 100%{ width:70%;}  }
 @-webkit-keyframes english          { 0%  { width:0px;} 100%{ width:50%;} }
 @-webkit-keyframes chinese         { 0%  { width:0px;} 100%{ width:100%;} }
