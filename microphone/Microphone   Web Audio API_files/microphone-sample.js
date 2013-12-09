@@ -58,13 +58,14 @@ MicrophoneSample.prototype.visualize = function() {
 
   var freqDomain = new Uint8Array(this.analyser.frequencyBinCount);
   this.analyser.getByteFrequencyData(freqDomain);
-      console.log(freqDomain);
+      
   var times = new Uint8Array(this.analyser.frequencyBinCount);
   this.analyser.getByteTimeDomainData(times);
 
   for (var i = 0; i < times.length; i++) {
 
     var value = times[i];
+    console.log(freqDomain[i]);
     var percent = value / 256;
     var height = this.HEIGHT * percent;
     var offset = this.HEIGHT - height - 1;
