@@ -21,6 +21,8 @@ function MicrophoneSample() {
   this.getMicrophoneInput();
   this.canvas = document.querySelector('canvas');
 
+
+
 }
 
 
@@ -63,14 +65,15 @@ MicrophoneSample.prototype.visualize = function() {
 
   var times = new Uint8Array(this.analyser.frequencyBinCount);
   this.analyser.getByteTimeDomainData(times);
-  document.getElementById('frequency1').innerHTML = freqDomain ;
 
 
-  for (var i = 0; i < times.length; i+=2) {
+  for (var i = 0; i < times.length; i++) {
     //var value = times[i];
     var fv = freqDomain[i];
     console.log(fv);
-    var text = fv + ' Hz'
+    var text = fv + ' Hz';
+    document.write("<h1>"+text+"<h1>");
+
     document.getElementById('frequency').innerHTML = text ;
       
     
