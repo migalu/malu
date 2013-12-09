@@ -64,16 +64,17 @@ MicrophoneSample.prototype.visualize = function() {
 
   for (var i = 0; i < times.length; i++) {
 
-    var value = times[i];
-    var  fv =freqDomain[i]
+    //var value = times[i];
+    var  fv =freqDomain[i];
+      console.log(fv);
     
-    var percent = value / 256;
-    var height = this.HEIGHT * percent;
-    var offset = this.HEIGHT - height - 1;
-    var barWidth = this.WIDTH/times.length;
-    drawContext.fillStyle = 'black';
-    drawContext.fillRect(i * barWidth, offset, 1, 1);
+    // var percent = value / 256;
+    // var height = this.HEIGHT * percent;
+    // var offset = this.HEIGHT - height - 1;
+    // var barWidth = this.WIDTH/times.length;
+    // drawContext.fillStyle = 'black';
+    // drawContext.fillRect(i * barWidth, offset, 1, 1);
   }
   requestAnimFrame(this.visualize.bind(this));
-  console.log(fv);
+
 };
