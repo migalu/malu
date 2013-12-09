@@ -60,7 +60,7 @@ MicrophoneSample.prototype.visualize = function() {
   this.analyser.getByteTimeDomainData(times);
   this.analyser.getFloatFrequencyData(times);
 
-  console.log(this.analyser.getFloatFrequencyData);
+  console.log(frequency);
   for (var i = 0; i < times.length; i++) {
     var value = times[i];
     var percent = value / 256;
