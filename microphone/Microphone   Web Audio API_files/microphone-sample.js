@@ -63,14 +63,15 @@ MicrophoneSample.prototype.visualize = function() {
         console.log(freqDomain);
   var times = new Uint8Array(this.analyser.frequencyBinCount);
   this.analyser.getByteTimeDomainData(times);
- 
+  document.getElementById('frequency1').innerHTML = freqDomain ;
 
 
   for (var i = 0; i < times.length; i+=100) {
     //var value = times[i];
     var fv = freqDomain[i];
     console.log(fv);
-    document.getElementById('frequency').innerHTML = fv + ' Hz';
+    var text = fv + ' Hz'
+    document.getElementById('frequency').innerHTML = text ;
       
     
     // var percent = value / 256;
