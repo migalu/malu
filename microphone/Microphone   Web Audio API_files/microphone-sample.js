@@ -59,8 +59,9 @@ MicrophoneSample.prototype.visualize = function() {
   var freqDomain = new Uint8Array(this.analyser.frequencyBinCount);
   this.analyser.getByteFrequencyData(freqDomain);
   this.analyser.getByteTimeDomainData(times);
+  var ffff = new Uint8Array(this.analyser.getByteFrequencyData);
 
-  console.log(this.analyser.getByteFrequencyData);
+  console.log(ffff);
 
   for (var i = 0; i < times.length; i++) {
     var value = times[i];
