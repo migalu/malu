@@ -56,11 +56,10 @@ MicrophoneSample.prototype.visualize = function() {
 
 
   var times = new Uint8Array(this.analyser.frequencyBinCount);
-
+  var freqDomain = new Float32Array(this.analyser.frequencyBinCount);
+  this.analyser.getFloatFrequencyData(freqDomain);
   this.analyser.getByteTimeDomainData(times);
-  this.analyser.getFloatFrequencyData(times);
-
-  console.log(frequency);
+  console.log(freqDomain);
   for (var i = 0; i < times.length; i++) {
     var value = times[i];
     var percent = value / 256;
