@@ -65,7 +65,7 @@ MicrophoneSample.prototype.visualize = function() {
     var barWidth = this.WIDTH/times.length;
     drawContext.fillStyle = 'black';
     drawContext.fillRect(i * barWidth, offset, 1, 1);
-    document.write(times);
+    
   }
   requestAnimFrame(this.visualize.bind(this));
 };
