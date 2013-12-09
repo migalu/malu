@@ -56,7 +56,7 @@ MicrophoneSample.prototype.visualize = function() {
   var drawContext = this.canvas.getContext('2d');
 
   var times = new Uint8Array(this.analyser.frequencyBinCount);
-  conole.log(times);
+
   this.analyser.getByteTimeDomainData(times);
   for (var i = 0; i < times.length; i++) {
     var value = times[i];
@@ -66,6 +66,7 @@ MicrophoneSample.prototype.visualize = function() {
     var barWidth = this.WIDTH/times.length;
     drawContext.fillStyle = 'black';
     drawContext.fillRect(i * barWidth, offset, 1, 1);
+      conole.log(times);
   }
   requestAnimFrame(this.visualize.bind(this));
 };
