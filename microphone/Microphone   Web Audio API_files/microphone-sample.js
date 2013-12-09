@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+
 function MicrophoneSample() {
   this.WIDTH = 640;
   this.HEIGHT = 480;
@@ -55,13 +56,17 @@ MicrophoneSample.prototype.visualize = function() {
   var drawContext = this.canvas.getContext('2d');
 
 
+  var freqDomain = new Uint8Array(this.analyser.frequencyBinCount);
+  this.analyser.getByteFrequencyData(freqDomain);
+  for (var i = 0; j < freqDomain.length; j++) {
+    var ffff = freqDomain[j]；
+    console.log(ffff);
+  }
 
   var times = new Uint8Array(this.analyser.frequencyBinCount);
   this.analyser.getByteTimeDomainData(times);
-
   for (var i = 0; i < times.length; i++) {
     var value = times[i];
-    var ffff = freqDomain[i]；
     var percent = value / 256;
     var height = this.HEIGHT * percent;
     var offset = this.HEIGHT - height - 1;
@@ -71,5 +76,3 @@ MicrophoneSample.prototype.visualize = function() {
   }
   requestAnimFrame(this.visualize.bind(this));
 };
-
-
