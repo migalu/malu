@@ -20,7 +20,9 @@ function MicrophoneSample() {
   this.HEIGHT = 480;
   this.getMicrophoneInput();
   this.canvas = document.querySelector('canvas');
+  var frequencyLabel = document.getElementById('frequency');
 }
+
 
 MicrophoneSample.prototype.getMicrophoneInput = function() {
   navigator.webkitGetUserMedia({audio: true},
@@ -61,12 +63,13 @@ MicrophoneSample.prototype.visualize = function() {
       
   var times = new Uint8Array(this.analyser.frequencyBinCount);
   this.analyser.getByteTimeDomainData(times);
+  console.log(times);
 
   for (var i = 0; i < times.length; i++) {
-
     //var value = times[i];
-    var  fv =freqDomain[i];
-      console.log(fv);
+    var fv =freqDomain[i];
+    frequencyLabel.innerHTML = Math.floor(fv) + ' Hz';
+      
     
     // var percent = value / 256;
     // var height = this.HEIGHT * percent;
