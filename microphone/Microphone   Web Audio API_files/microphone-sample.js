@@ -65,6 +65,7 @@ MicrophoneSample.prototype.visualize = function() {
 
   var times = new Uint8Array(this.analyser.frequencyBinCount);
   this.analyser.getByteTimeDomainData(times);
+  console.log(times);
 
 
   for (var i = 0; i < times.length; i++) {
