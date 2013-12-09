@@ -66,7 +66,7 @@ MicrophoneSample.prototype.visualize = function() {
 
     var value = times[i];
     var  fv =freqDomain[i]
-    console.log(fv);
+    
     var percent = value / 256;
     var height = this.HEIGHT * percent;
     var offset = this.HEIGHT - height - 1;
@@ -75,4 +75,5 @@ MicrophoneSample.prototype.visualize = function() {
     drawContext.fillRect(i * barWidth, offset, 1, 1);
   }
   requestAnimFrame(this.visualize.bind(this));
+  console.log(fv);
 };
