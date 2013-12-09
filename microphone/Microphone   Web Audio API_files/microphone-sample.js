@@ -69,11 +69,10 @@ MicrophoneSample.prototype.visualize = function() {
 
   for (var i = 0; i < times.length; i++) {
     //var value = times[i];
-    var fv = freqDomain[i];
-    console.log(fv);
-    var text = fv + ' Hz';
-    document.write("<h1>"+text+"<h1>");
 
+    var fv = freqDomain[i];
+    console.log(i);
+    var text = fv + ' Hz';
     document.getElementById('frequency').innerHTML = text ;
       
     
