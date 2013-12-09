@@ -55,13 +55,18 @@ MicrophoneSample.prototype.visualize = function() {
   var drawContext = this.canvas.getContext('2d');
 
 
-  var times = new Uint8Array(this.analyser.frequencyBinCount);
+
   var freqDomain = new Uint8Array(this.analyser.frequencyBinCount);
   this.analyser.getByteFrequencyData(freqDomain);
-  this.analyser.getByteTimeDomainData(times);
-  var ffff = new Uint8Array(this.analyser.getByteFrequencyData);
 
-  console.log(ffff);
+
+  for (var i = 0; i < freqDomain.length; i++) {
+    var ffff = freqDomain[i]；
+    console.log(ffff);
+  }
+
+  var times = new Uint8Array(this.analyser.frequencyBinCount);
+  this.analyser.getByteTimeDomainData(times);
 
   for (var i = 0; i < times.length; i++) {
     var value = times[i];
@@ -75,8 +80,4 @@ MicrophoneSample.prototype.visualize = function() {
   requestAnimFrame(this.visualize.bind(this));
 };
 
-MicrophoneSample.prototype.getFrequencyValue = function(freq) {
-  var nyquist = context.sampleRate/2;
-  var index = Math.round(freq/nyquist * freqDomain.length);
-  return freqDomain[index];
-}
+
