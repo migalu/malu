@@ -56,6 +56,7 @@ MicrophoneSample.prototype.visualize = function() {
   var drawContext = this.canvas.getContext('2d');
 
   var times = new Uint8Array(this.analyser.frequencyBinCount);
+  conole.log(times);
   this.analyser.getByteTimeDomainData(times);
   for (var i = 0; i < times.length; i++) {
     var value = times[i];
