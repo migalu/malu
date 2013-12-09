@@ -70,9 +70,9 @@ MicrophoneSample.prototype.visualize = function() {
   for (var i = 0; i < times.length; i++) {
     var value = times[i];
 
-    var fv = times[i];
+    //var fv = times[i];
     //console.log(i);
-    var text = fv + ' Hz';
+    var text = value + ' Hz';
     document.getElementById('frequency').innerHTML = text ;
       
     
