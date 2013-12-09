@@ -55,13 +55,12 @@ MicrophoneSample.prototype.visualize = function() {
   var drawContext = this.canvas.getContext('2d');
 
 
-
   var freqDomain = new Uint8Array(this.analyser.frequencyBinCount);
   this.analyser.getByteFrequencyData(freqDomain);
 
 
-  for (var i = 0; i < freqDomain.length; i++) {
-    var ffff = freqDomain[i]；
+  for (var i = 0; j < freqDomain.length; j++) {
+    var ffff = freqDomain[j]；
     console.log(ffff);
   }
 
@@ -70,6 +69,7 @@ MicrophoneSample.prototype.visualize = function() {
 
   for (var i = 0; i < times.length; i++) {
     var value = times[i];
+    var ffff = freqDomain[i]；
     var percent = value / 256;
     var height = this.HEIGHT * percent;
     var offset = this.HEIGHT - height - 1;
