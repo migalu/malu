@@ -54,6 +54,8 @@ MicrophoneSample.prototype.visualize = function() {
   this.canvas.width = this.WIDTH;
   this.canvas.height = this.HEIGHT;
   var drawContext = this.canvas.getContext('2d');
+  var context = document.getElementById("canvas").getContext("2d");
+  context.fillText(times, 10, 10);
 
   var times = new Uint8Array(this.analyser.frequencyBinCount);
 
