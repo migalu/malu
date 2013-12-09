@@ -56,10 +56,12 @@ MicrophoneSample.prototype.visualize = function() {
 
 
   var times = new Uint8Array(this.analyser.frequencyBinCount);
-  var freqDomain = new Float32Array(this.analyser.frequencyBinCount);
-  this.analyser.getFloatFrequencyData(freqDomain);
+  var freqDomain = new Uint8Array(this.analyser.frequencyBinCount);
+  this.analyser.getByteFrequencyData(freqDomain);
   this.analyser.getByteTimeDomainData(times);
-  console.log(freqDomain);
+
+  console.log(this.analyser.getByteFrequencyData);
+
   for (var i = 0; i < times.length; i++) {
     var value = times[i];
     var percent = value / 256;
@@ -71,3 +73,9 @@ MicrophoneSample.prototype.visualize = function() {
   }
   requestAnimFrame(this.visualize.bind(this));
 };
+
+MicrophoneSample.prototype.getFrequencyValue = function(freq) {
+  var nyquist = context.sampleRate/2;
+  var index = Math.round(freq/nyquist * freqDomain.length);
+  return freqDomain[index];
+}
