@@ -34,7 +34,7 @@ MicrophoneSample.prototype.onStream = function(stream) {
   filter.frequency.value = 60.0;
   filter.type = filter.NOTCH;
   filter.Q = 10.0;
-    console.log(frequency);
+
   var analyser = context.createAnalyser();
 
   // Connect graph.
@@ -54,7 +54,7 @@ MicrophoneSample.prototype.visualize = function() {
   this.canvas.width = this.WIDTH;
   this.canvas.height = this.HEIGHT;
   var drawContext = this.canvas.getContext('2d');
-
+ 
 
   var times = new Uint8Array(this.analyser.frequencyBinCount);
   this.analyser.getByteTimeDomainData(times);
