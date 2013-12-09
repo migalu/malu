@@ -70,10 +70,10 @@ MicrophoneSample.prototype.visualize = function() {
   for (var i = 0; i < times.length; i++) {
     //var value = times[i];
 
-    var fv = freqDomain[i];
+    //var fv = freqDomain[i];
     console.log(i);
-    var text = fv + ' Hz';
-    document.getElementById('frequency').innerHTML = text ;
+    //var text = fv + ' Hz';
+    //document.getElementById('frequency').innerHTML = text ;
       
     
     // var percent = value / 256;
