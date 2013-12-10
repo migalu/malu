@@ -28,14 +28,14 @@ function MicrophoneSample() {
 
 MicrophoneSample.prototype.getMicrophoneInput = function() {
   navigator.webkitGetUserMedia({audio: true},
-                               this.onStream.bind(this),
-                               this.onStreamError.bind(this));
+  this.onStream.bind(this),
+  this.onStreamError.bind(this));
 };
 
 MicrophoneSample.prototype.onStream = function(stream) {
   var input = context.createMediaStreamSource(stream);
   var filter = context.createBiquadFilter();
-  filter.frequency.value = 440.0;
+  filter.frequency.value = 60.0;
   filter.type = filter.NOTCH;
   filter.Q = 10.0;
 
