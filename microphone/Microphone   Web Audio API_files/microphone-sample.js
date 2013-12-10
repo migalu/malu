@@ -72,12 +72,13 @@ MicrophoneSample.prototype.visualize = function() {
 
   var times = new Uint8Array(this.analyser.frequencyBinCount);
   this.analyser.getByteTimeDomainData(times);
-OFFSET = 100;
+OFFSET = times/2;
   
-for (var i = 0; i < freqDomain.length- OFFSET; i++) {
-  var value = freqDomain[i] + OFFSET;
+
+  var value = freqDomain[OFFSET];
+  console.log(value);
   document.getElementById('frequency').innelHTML = value + 'Hz';
-}
+
   requestAnimFrame(this.visualize.bind(this));
 
 };
