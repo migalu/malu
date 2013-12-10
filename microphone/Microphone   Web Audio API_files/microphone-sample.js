@@ -73,7 +73,7 @@ MicrophoneSample.prototype.visualize = function() {
 
 
   for (var i = 0; i < freqDomain.length; i++) {
-    var value = freqDomain[i];
+    var value = times[i];
 
     //var fv = times[i];
     //console.log(i);
