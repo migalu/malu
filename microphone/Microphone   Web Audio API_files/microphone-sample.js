@@ -59,22 +59,24 @@ MicrophoneSample.prototype.visualize = function() {
   this.canvas.height = this.HEIGHT;
   var drawContext = this.canvas.getContext('2d');
 
+  this.input.frequency.value = val;
+  console.log(val);
+
   console.log(this.analyser.frequencyBinCount);
   var freqDomain = new Float32Array(this.analyser.frequencyBinCount);
   //this.analyser.getByteFrequencyData(freqDomain);
 
   this.analyser.getFloatFrequencyData(freqDomain);
   // console.log(freqDomain);
-  console.log(freqDomain);
  
   var nyquist = context.sampleRate/2;
-  console.log(nyquist);
+
 
   var f = freqDomain[1];
   var valuerealf= Math.round(nyquist*Math.PI*f);
     //console.log(freqDomain[1023]);
-    console.log(freqDomain[1]);
-    console.log( valuerealf);
+    //console.log(freqDomain[1]);
+    //console.log( valuerealf);
    
 
     //var fv = times[i];
