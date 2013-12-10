@@ -67,13 +67,18 @@ MicrophoneSample.prototype.visualize = function() {
   // console.log(freqDomain);
   console.log(freqDomain);
 
-    var valuef = freqDomain[1];
+  var nyquist = context.sampleRate/2;
+
+  var f = freqDomain[1];
+  var valuerealf= Math.round(nyquist*f);
     //console.log(freqDomain[1023]);
     console.log(freqDomain[1]);
+    console.log( valuerealf);
+   
 
     //var fv = times[i];
     //console.log(i);
-    var text = valuef + ' Hz';
+    var text = valuerealf + ' Hz';
     document.getElementById('frequency').innerHTML = text ;
 
 
