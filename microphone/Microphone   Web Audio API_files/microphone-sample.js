@@ -69,7 +69,7 @@ MicrophoneSample.prototype.visualize = function() {
 
 
   for (var i = 0; i < this.analyser.frequencyBinCount; i++) {
-    var value = times[i];
+    var value = freqDomain[i];
 
     //var fv = times[i];
     //console.log(i);
