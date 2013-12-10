@@ -60,7 +60,8 @@ MicrophoneSample.prototype.visualize = function() {
   var drawContext = this.canvas.getContext('2d');
 
   console.log(this.analyser.frequencyBinCount);
-  var freqDomain = new Float32Array(this.analyser.frequencyBinCount);
+  this.analyser.fftSize=32;
+  var freqDomain = new Uint8Array(this.analyser.frequencyBinCount);
   //this.analyser.getByteFrequencyData(freqDomain);
 
   this.analyser.getFloatFrequencyData(freqDomain);
