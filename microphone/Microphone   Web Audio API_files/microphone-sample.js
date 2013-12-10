@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-var FFT_SIZE = 2048;
+
 
 function MicrophoneSample() {
   this.WIDTH = 640;
@@ -58,8 +58,6 @@ MicrophoneSample.prototype.visualize = function() {
   this.canvas.width = this.WIDTH;
   this.canvas.height = this.HEIGHT;
   var drawContext = this.canvas.getContext('2d');
-
-  this.analyser.fftSize = FFT_SIZE;
 
 
   console.log(this.analyser.frequencyBinCount);
