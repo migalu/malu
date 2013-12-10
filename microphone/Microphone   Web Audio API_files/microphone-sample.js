@@ -96,8 +96,8 @@ MicrophoneSample.prototype.visualize = function() {
 };
 
 MicrophoneSample.prototype.visualizet = function() {
-  this.canvas.width = this.WIDTH;
-  this.canvas.height = this.HEIGHT;
+  // this.canvas.width = this.WIDTH;
+  // this.canvas.height = this.HEIGHT;
   var drawContext = this.canvas.getContext('2d');
 
 
