@@ -20,9 +20,6 @@ function MicrophoneSample() {
   this.HEIGHT = 480;
   this.getMicrophoneInput();
   this.canvas = document.querySelector('canvas');
-
-
-
 }
 
 
@@ -61,7 +58,7 @@ MicrophoneSample.prototype.visualize = function() {
 
 
   console.log(this.analyser.frequencyBinCount);
-  var freqDomain = new Float32Array(this.analyser.frequencyBinCount);
+  var freqDomain = new Uint8Array(this.analyser.frequencyBinCount);
   //this.analyser.getByteFrequencyData(freqDomain);
 
   this.analyser.getFloatFrequencyData(freqDomain);
