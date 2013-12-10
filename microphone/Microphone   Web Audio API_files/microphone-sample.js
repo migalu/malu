@@ -29,7 +29,7 @@ function MicrophoneSample() {
 MicrophoneSample.prototype.getMicrophoneInput = function() {
   navigator.webkitGetUserMedia({audio: true},
   this.onStream.bind(this),
-  this.onStreamError.bind(this));
+                               this.onStreamError.bind(this));
 };
 
 MicrophoneSample.prototype.onStream = function(stream) {
@@ -54,13 +54,13 @@ MicrophoneSample.prototype.onStreamError = function(e) {
   console.error('Error getting microphone', e);
 };
 
-MicrophoneSample.prototype.visualize = function(frequency) {
+MicrophoneSample.prototype.visualize = function() {
   this.canvas.width = this.WIDTH;
   this.canvas.height = this.HEIGHT;
   var drawContext = this.canvas.getContext('2d');
 
 
-  var freqDomain = new Uint8Array(this.analyser.frequencyBinCount);
+  var freqDomain = new Float32Array(this.analyser.frequencyBinCount);
   this.analyser.getByteFrequencyData(freqDomain);
   //console.log(freqDomain);
   //console.log(freqDomain.length);
@@ -94,3 +94,51 @@ MicrophoneSample.prototype.visualize = function(frequency) {
   requestAnimFrame(this.visualize.bind(this));
 
 };
+
+MicrophoneSample.prototype.visualizet = function() {
+  this.canvas.width = this.WIDTH;
+  this.canvas.height = this.HEIGHT;
+  var drawContext = this.canvas.getContext('2d');
+
+
+  // var freqDomain = new Uint8Array(this.analyser.frequencyBinCount);
+  // this.analyser.getByteFrequencyData(freqDomain);
+  //console.log(freqDomain);
+  //console.log(freqDomain.length);
+
+
+
+  var times = new Uint8Array(this.analyser.frequencyBinCount);
+  this.analyser.getByteTimeDomainData(times);
+  //console.log(times);
+
+
+  for (var i = 0; i < freqDomain.length; i++) {
+    var value = freqDomain[i];
+
+    //var fv = times[i];
+    //console.log(i);
+    var text = value + ' Hz';
+    document.getElementById('frequency').innerHTML = text ;
+      
+    
+    var percent = value / 256;
+    var height = this.HEIGHT * percent;
+    var offset = this.HEIGHT - height - 1;
+    var barWidth = this.WIDTH/times.length;
+    drawContext.fillStyle = 'black';
+    drawContext.fillRect(i * barWidth, offset, 1, 1);
+  }
+  requestAnimFrame(this.visualize.bind(this));
+
+};
+
+var freqDomain = new Float32Array(analyser.frequencyBinCount);
+analyser.getFloatFrequencyData(freqDomain);
+
+function getFrequencyValue(frequency) {
+  var nyquist = context.sampleRate/2;
+  var index = Math.round(frequency/nyquist * freqDomain.length);
+  return freqDomain[index];
+}
+
