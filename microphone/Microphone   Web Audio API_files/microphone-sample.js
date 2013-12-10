@@ -16,10 +16,12 @@
 
 
 function MicrophoneSample() {
-  this.WIDTH = 240;
-  this.HEIGHT = 280;
+  this.WIDTH = 640;
+  this.HEIGHT = 480;
   this.getMicrophoneInput();
   this.canvas = document.querySelector('canvas');
+
+
 
 }
 
@@ -29,9 +31,6 @@ MicrophoneSample.prototype.getMicrophoneInput = function() {
                                this.onStream.bind(this),
                                this.onStreamError.bind(this));
 };
-
-
-
 
 MicrophoneSample.prototype.onStream = function(stream) {
   var input = context.createMediaStreamSource(stream);
@@ -55,31 +54,31 @@ MicrophoneSample.prototype.onStreamError = function(e) {
   console.error('Error getting microphone', e);
 };
 
-MicrophoneSample.prototype.visualize = function(frequency) {
+MicrophoneSample.prototype.visualize = function() {
   this.canvas.width = this.WIDTH;
   this.canvas.height = this.HEIGHT;
   var drawContext = this.canvas.getContext('2d');
 
+
+  var freqDomain = new Uint8Array(this.analyser.frequencyBinCount);
+  this.analyser.getByteFrequencyData(freqDomain);
+  // console.log(freqDomain);
+  // console.log(freqDomain.length);
+
+
+
   var times = new Uint8Array(this.analyser.frequencyBinCount);
   this.analyser.getByteTimeDomainData(times);
-  // //console.log(times);
-
-  var freqDomain = new Float32Array(this.analyser.frequencyBinCount);
-  this.analyser.getByteFrequencyData(freqDomain);
-
-  var nyquist = context.sampleRate/2;
-  var index = Math.round(frequency/nyquist * freqDomain.length);
-  return freqDomain[index];
-  console.log(frequency);
-  console.log(freqDomain[index]);
-  var text = freqDomain[index];
-
-  document.getElementById('frequency').innerHTML = text ;
-  requestAnimFrame(this.visualize.bind(this));
+  //console.log(times);
 
 
-  for (var i = 0; i < times.length; i++) {
-    //document.getElementById('frequency').innerHTML = text ;
+  for (var i = 0; i < freqDomain.length; i++) {
+    var value = freqDomain[i];
+
+    //var fv = times[i];
+    //console.log(i);
+    var text = value + ' Hz';
+    document.getElementById('frequency').innerHTML = text ;
       
     
     var percent = value / 256;
@@ -92,10 +91,3 @@ MicrophoneSample.prototype.visualize = function(frequency) {
   requestAnimFrame(this.visualize.bind(this));
 
 };
-
-// MicrophoneSample.prototype.getFrequencyValue= function(frequency) {
-
-
-// };
-
-
