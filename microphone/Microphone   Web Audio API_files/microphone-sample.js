@@ -72,16 +72,16 @@ MicrophoneSample.prototype.visualize = function() {
   console.log(freqDomain.length);
   console.log(freqDomain);
 
-
-  for (var i = 0; i < freqDomain.length; i++) {
-    var value = times[i];
+    var valuef = freqDomain[1023];
 
     //var fv = times[i];
     //console.log(i);
-    var text = value + ' Hz';
+    var text = valuef + ' Hz';
     document.getElementById('frequency').innerHTML = text ;
-      
-    
+
+
+  for (var i = 0; i < times[i]; i++) {
+    var value = times[i];
     var percent = value;
     var height = this.HEIGHT * percent;
     var offset = this.HEIGHT - height - 1;
