@@ -55,14 +55,27 @@ MicrophoneSample.prototype.onStreamError = function(e) {
   console.error('Error getting microphone', e);
 };
 
-MicrophoneSample.prototype.visualize = function() {
-  // this.canvas.width = this.WIDTH;
-  // this.canvas.height = this.HEIGHT;
-  // var drawContext = this.canvas.getContext('2d');
+MicrophoneSample.prototype.visualize = function(frequency) {
+  this.canvas.width = this.WIDTH;
+  this.canvas.height = this.HEIGHT;
+  var drawContext = this.canvas.getContext('2d');
 
   // var times = new Uint8Array(this.analyser.frequencyBinCount);
   // this.analyser.getByteTimeDomainData(times);
   // //console.log(times);
+
+  var freqDomain = new Float32Array(this.analyser.frequencyBinCount);
+  this.analyser.getByteFrequencyData(freqDomain);
+
+  var nyquist = context.sampleRate/2;
+  var index = Math.round(frequency/nyquist * freqDomain.length);
+  return freqDomain[index];
+  console.log(frequency);
+  console.log(freqDomain[index]);
+  var text = freqDomain[index];
+
+  document.getElementById('frequency').innerHTML = text ;
+  requestAnimFrame(this.visualize.bind(this));
 
 
   // for (var i = 0; i < freqDomain.length; i++) {
@@ -85,19 +98,9 @@ MicrophoneSample.prototype.visualize = function() {
 
 };
 
-MicrophoneSample.prototype.getFrequencyValue= function(frequency) {
+// MicrophoneSample.prototype.getFrequencyValue= function(frequency) {
 
-  var freqDomain = new Float32Array(this.analyser.frequencyBinCount);
-  this.analyser.getByteFrequencyData(freqDomain);
 
-  var nyquist = context.sampleRate/2;
-  var index = Math.round(frequency/nyquist * freqDomain.length);
-  return freqDomain[index];
-  console.log(freqDomain[index]);
-  var text = freqDomain[index];
-
-  document.getElementById('frequency').innerHTML = text ;
-  requestAnimFrame(this.visualize.bind(this));
-};
+// };
 
 
