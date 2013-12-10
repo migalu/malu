@@ -67,8 +67,9 @@ MicrophoneSample.prototype.visualize = function() {
   this.analyser.getFloatFrequencyData(freqDomain);
   // console.log(freqDomain);
   console.log(freqDomain);
-
+ 
   var nyquist = context.sampleRate/2;
+  console.log(nyquist);
 
   var f = freqDomain[1];
   var valuerealf= Math.round(nyquist*Math.PI*f);
