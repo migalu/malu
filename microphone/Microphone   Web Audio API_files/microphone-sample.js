@@ -64,15 +64,16 @@ MicrophoneSample.prototype.visualize = function() {
   var freqDomain = new Float32Array(this.analyser.frequencyBinCount);
   //this.analyser.getByteFrequencyData(freqDomain);
   this.analyser.getByteFrequencyData(freqDomain);
+  this.analyser.getFloatFrequencyData(freqDomain1);
   // console.log(freqDomain);
-  console.log(freqDomain);
+  console.log(freqDomain1);
 
   var nyquist = context.sampleRate/2;
 
-  var f = freqDomain[1];
+  var f = freqDomain1[1];
   var valuerealf= Math.round(nyquist*Math.PI*f);
     //console.log(freqDomain[1023]);
-    console.log(freqDomain[1]);
+    console.log(freqDomain1[1]);
     console.log( valuerealf);
    
 
