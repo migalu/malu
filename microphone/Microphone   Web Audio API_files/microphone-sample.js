@@ -97,6 +97,7 @@ MicrophoneSample.prototype.getFrequencyValue= function(frequency) {
   var nyquist = context.sampleRate/2;
   var index = Math.round(frequency/nyquist * freqDomain.length);
   return freqDomain[index];
+  console.log(index);
   requestAnimFrame(this.visualize.bind(this));
 };
 
