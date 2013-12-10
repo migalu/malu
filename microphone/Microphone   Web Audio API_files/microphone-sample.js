@@ -16,8 +16,8 @@
 
 
 function MicrophoneSample() {
-  this.WIDTH = 640;
-  this.HEIGHT = 480;
+  this.WIDTH = 240;
+  this.HEIGHT = 280;
   this.getMicrophoneInput();
   this.canvas = document.querySelector('canvas');
 
@@ -28,9 +28,12 @@ function MicrophoneSample() {
 
 MicrophoneSample.prototype.getMicrophoneInput = function() {
   navigator.webkitGetUserMedia({audio: true},
-  this.onStream.bind(this),
+                               this.onStream.bind(this),
                                this.onStreamError.bind(this));
 };
+
+
+
 
 MicrophoneSample.prototype.onStream = function(stream) {
   var input = context.createMediaStreamSource(stream);
@@ -60,51 +63,10 @@ MicrophoneSample.prototype.visualize = function() {
   var drawContext = this.canvas.getContext('2d');
 
 
-  var freqDomain = new Float32Array(this.analyser.frequencyBinCount);
+  var freqDomain = new Uint8Array(this.analyser.frequencyBinCount);
   this.analyser.getByteFrequencyData(freqDomain);
-  //console.log(freqDomain);
-  //console.log(freqDomain.length);
-  var nyquist = context.sampleRate/2;
-  var index = Math.round(frequency/nyquist * freqDomain.length);
-  return freqDomain[index];
-  console.log(freqDomain[index]);
-
-
-  var times = new Uint8Array(this.analyser.frequencyBinCount);
-  this.analyser.getByteTimeDomainData(times);
-  //console.log(times);
-
-
-  for (var i = 0; i < freqDomain.length; i++) {
-    var value = freqDomain[i];
-
-    //var fv = times[i];
-    //console.log(i);
-    var text = value + ' Hz';
-    document.getElementById('frequency').innerHTML = text ;
-      
-    
-    var percent = value / 256;
-    var height = this.HEIGHT * percent;
-    var offset = this.HEIGHT - height - 1;
-    var barWidth = this.WIDTH/times.length;
-    drawContext.fillStyle = 'black';
-    drawContext.fillRect(i * barWidth, offset, 1, 1);
-  }
-  requestAnimFrame(this.visualize.bind(this));
-
-};
-
-MicrophoneSample.prototype.visualizet = function() {
-  // this.canvas.width = this.WIDTH;
-  // this.canvas.height = this.HEIGHT;
-  var drawContext = this.canvas.getContext('2d');
-
-
-  // var freqDomain = new Uint8Array(this.analyser.frequencyBinCount);
-  // this.analyser.getByteFrequencyData(freqDomain);
-  //console.log(freqDomain);
-  //console.log(freqDomain.length);
+  // console.log(freqDomain);
+  // console.log(freqDomain.length);
 
 
 
@@ -133,10 +95,7 @@ MicrophoneSample.prototype.visualizet = function() {
 
 };
 
-var freqDomain = new Float32Array(analyser.frequencyBinCount);
-analyser.getFloatFrequencyData(freqDomain);
-
-function getFrequencyValue(frequency) {
+MicrophoneSample.prototype.getFrequencyValue= function(frequency) {
   var nyquist = context.sampleRate/2;
   var index = Math.round(frequency/nyquist * freqDomain.length);
   return freqDomain[index];
