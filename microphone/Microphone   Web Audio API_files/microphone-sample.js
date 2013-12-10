@@ -17,7 +17,7 @@
 
 function MicrophoneSample() {
   this.WIDTH = 640;
-  this.HEIGHT = 40;
+  this.HEIGHT = 20;
   this.getMicrophoneInput();
   this.canvas = document.querySelector('canvas');
 
