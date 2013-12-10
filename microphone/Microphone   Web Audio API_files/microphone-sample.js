@@ -63,16 +63,9 @@ MicrophoneSample.prototype.visualize = function() {
   console.log(this.analyser.frequencyBinCount);
   var freqDomain = new Uint8Array(this.analyser.frequencyBinCount);
   //this.analyser.getByteFrequencyData(freqDomain);
-  this.analyser.getFloatFrequencyData(freqDomain);
+  this.analyser.getByteFrequencyData(freqDomain);
   // console.log(freqDomain);
   console.log(freqDomain);
-
-
-
-  var times = new Uint8Array(this.analyser.frequencyBinCount);
-  this.analyser.getByteTimeDomainData(times);
-  //onsole.log(freqDomain.length);
-  //console.log(freqDomain);
 
     var valuef = freqDomain[1];
     //console.log(freqDomain[1023]);
@@ -82,6 +75,14 @@ MicrophoneSample.prototype.visualize = function() {
     //console.log(i);
     var text = valuef + ' Hz';
     document.getElementById('frequency').innerHTML = text ;
+
+
+
+  var times = new Uint8Array(this.analyser.frequencyBinCount);
+  this.analyser.getByteTimeDomainData(times);
+  //onsole.log(freqDomain.length);
+  //console.log(freqDomain);
+
 
 
   for (var i = 0; i < times[i]; i++) {
