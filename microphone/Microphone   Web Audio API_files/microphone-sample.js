@@ -21,8 +21,6 @@ function MicrophoneSample() {
   this.getMicrophoneInput();
   this.canvas = document.querySelector('canvas');
 
-
-
 }
 
 
@@ -99,5 +97,7 @@ MicrophoneSample.prototype.getFrequencyValue= function(frequency) {
   var nyquist = context.sampleRate/2;
   var index = Math.round(frequency/nyquist * freqDomain.length);
   return freqDomain[index];
-}
+  requestAnimFrame(this.visualize.bind(this));
+};
+
 
