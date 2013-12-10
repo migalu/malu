@@ -20,6 +20,9 @@ function MicrophoneSample() {
   this.HEIGHT = 480;
   this.getMicrophoneInput();
   this.canvas = document.querySelector('canvas');
+
+
+
 }
 
 
@@ -56,18 +59,28 @@ MicrophoneSample.prototype.visualize = function() {
   this.canvas.height = this.HEIGHT;
   var drawContext = this.canvas.getContext('2d');
 
+  this.input.frequency.value = val;
+  console.log(val);
 
   console.log(this.analyser.frequencyBinCount);
-  var freqDomain = new Uint8Array(this.analyser.frequencyBinCount);
+  var freqDomain = new Float32Array(this.analyser.frequencyBinCount);
   //this.analyser.getByteFrequencyData(freqDomain);
 
   this.analyser.getFloatFrequencyData(freqDomain);
   // console.log(freqDomain);
  
-  //var nyquist = context.sampleRate/2;
+  var nyquist = context.sampleRate/2;
 
 
-   f = freqDomain[1];
+  var f = freqDomain[1];
+  var valuerealf= Math.round(nyquist*Math.PI*f);
+    //console.log(freqDomain[1023]);
+    //console.log(freqDomain[1]);
+    //console.log( valuerealf);
+   
+
+    //var fv = times[i];
+    //console.log(i);
     var text = f + ' Hz';
     document.getElementById('frequency').innerHTML = text ;
 
@@ -77,5 +90,18 @@ MicrophoneSample.prototype.visualize = function() {
   this.analyser.getByteTimeDomainData(times);
   //onsole.log(freqDomain.length);
   //console.log(freqDomain);
+
+
+
+  for (var i = 0; i < times[i]; i++) {
+    var value = times[i];
+    var percent = value;
+    var height = this.HEIGHT * percent;
+    var offset = this.HEIGHT - height - 1;
+    var barWidth = this.WIDTH/times.length;
+    drawContext.fillStyle = 'black';
+    drawContext.fillRect(i * barWidth, offset, 1, 1);
+  }
+  requestAnimFrame(this.visualize.bind(this));
 
 };
