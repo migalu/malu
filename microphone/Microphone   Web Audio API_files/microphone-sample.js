@@ -28,8 +28,8 @@ function MicrophoneSample() {
 
 MicrophoneSample.prototype.getMicrophoneInput = function() {
   navigator.webkitGetUserMedia({audio: true},
-                               this.onStream.bind(this),
-                               this.onStreamError.bind(this));
+  this.onStream.bind(this),
+  this.onStreamError.bind(this));
 };
 
 MicrophoneSample.prototype.onStream = function(stream) {
@@ -54,7 +54,7 @@ MicrophoneSample.prototype.onStreamError = function(e) {
   console.error('Error getting microphone', e);
 };
 
-MicrophoneSample.prototype.visualize = function() {
+MicrophoneSample.prototype.visualize = function(frequency) {
   this.canvas.width = this.WIDTH;
   this.canvas.height = this.HEIGHT;
   var drawContext = this.canvas.getContext('2d');
@@ -62,8 +62,8 @@ MicrophoneSample.prototype.visualize = function() {
 
   var freqDomain = new Uint8Array(this.analyser.frequencyBinCount);
   this.analyser.getByteFrequencyData(freqDomain);
-  console.log(freqDomain);
-  console.log(freqDomain.length);
+  //console.log(freqDomain);
+  //console.log(freqDomain.length);
   var nyquist = context.sampleRate/2;
   var index = Math.round(frequency/nyquist * freqDomain.length);
   return freqDomain[index];
