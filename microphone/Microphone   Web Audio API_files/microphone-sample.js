@@ -66,19 +66,28 @@ MicrophoneSample.prototype.visualize = function() {
   // console.log(freqDomain.length);
 
 
-  var nyquist = context.sampleRate/2;
-  var index = Math.round(frequency/nyquist * freqDomain.length);
-  return freqDomain[index];
 
   var times = new Uint8Array(this.analyser.frequencyBinCount);
   this.analyser.getByteTimeDomainData(times);
-OFFSET = times/2;
-  
+  console.log(freqDomain.length);
 
-  var value = freqDomain[OFFSET];
-  console.log(value);
-  document.getElementById('frequency').innelHTML = value + 'Hz';
 
+  for (var i = 0; i < freqDomain.length; i++) {
+    var value = times[i];
+
+    //var fv = times[i];
+    //console.log(i);
+    var text = value + ' Hz';
+    document.getElementById('frequency').innerHTML = text ;
+      
+    
+    var percent = value;
+    var height = this.HEIGHT * percent;
+    var offset = this.HEIGHT - height - 1;
+    var barWidth = this.WIDTH/times.length;
+    drawContext.fillStyle = 'black';
+    drawContext.fillRect(i * barWidth, offset, 1, 1);
+  }
   requestAnimFrame(this.visualize.bind(this));
 
 };
